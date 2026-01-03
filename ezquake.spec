@@ -6,6 +6,7 @@ License:        GPL-2.0-or-later
 Group:          Amusements/Games/3D/Shoot
 URL:            https://www.ezquake.com/
 Source0:        https://github.com/QW-Group/ezquake-source/releases/download/%{version}/ezquake-source-%{version}.tar.gz
+BuildRequires:  make
 BuildRequires:  cmake
 BuildRequires:  hicolor-icon-theme
 BuildRequires:  pkgconfig
