@@ -1,3 +1,5 @@
+%undefine _debugsource_packages
+
 Name:           ezquake
 Version:        3.6.8
 Release:        1
