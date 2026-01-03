@@ -1,13 +1,12 @@
 Name:           ezquake
 Version:        3.6.8
-Release:        0
+Release:        1
 Summary:        A modern QuakeWorld client
 License:        GPL-2.0-or-later
 Group:          Amusements/Games/3D/Shoot
 URL:            https://www.ezquake.com/
-#Git-Clone:     https://github.com/ezQuake/ezquake-source.git
-Source:         %{name}-source-%{version}.tar.xz
-BuildRequires:  cmake >= 3.22
+Source0:        https://github.com/QW-Group/ezquake-source/releases/download/%{version}/ezquake-source-%{version}.tar.gz
+BuildRequires:  cmake
 BuildRequires:  hicolor-icon-theme
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(expat)
@@ -37,12 +36,12 @@ for online gameplay.
 Game data must be placed in ~/.ezquake/id1 .
 
 %prep
-%setup -q -n %{name}-source-%{version}
+%autosetup -n %{name}-source-%{version} -p1
 sed -i 's|Exec=ezquake.sh|Exec=ezquake|g' dist/linux/io.github.ezQuake.desktop
 
 %build
 %cmake
-%cmake_build
+%make_build
 strip ezquake-linux-*
 
 %install
