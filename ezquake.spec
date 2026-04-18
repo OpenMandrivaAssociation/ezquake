@@ -1,7 +1,7 @@
 %undefine _debugsource_packages
 
 Name:           ezquake
-Version:        3.6.8
+Version:        3.6.9
 Release:        1
 Summary:        A modern QuakeWorld client
 License:        GPL-2.0-or-later
